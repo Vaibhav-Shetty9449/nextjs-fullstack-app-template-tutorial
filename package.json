@@ -16,7 +16,7 @@
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
     "format:check": "prettier --check \"src/**/*.{js,jsx,ts,tsx}\"",
     "format:all": "prettier --write . --ignore-path .prettierignore --no-error-on-unmatched-pattern",
-    "prepare": "husky",
+    "prepare": "husky install",
     "test": "echo \"No tests yet\" && exit 0"
   },
   "dependencies": {
