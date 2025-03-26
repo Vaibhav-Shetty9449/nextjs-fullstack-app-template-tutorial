@@ -11,11 +11,13 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "next lint, eslint src --ext .js,.jsx,.ts,.tsx",
     "prettier": "prettier --write .",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
     "format:check": "prettier --check \"src/**/*.{js,jsx,ts,tsx}\"",
-    "format:all": "prettier --write . --ignore-path .prettierignore --no-error-on-unmatched-pattern"
+    "format:all": "prettier --write . --ignore-path .prettierignore --no-error-on-unmatched-pattern",
+    "prepare": "husky",
+    "test": "echo \"No tests yet\" && exit 0"
   },
   "dependencies": {
     "next": "15.2.4",
@@ -34,6 +36,7 @@
     "eslint-config-next": "15.2.4",
     "eslint-plugin-react": "^7.37.4",
     "eslint-plugin-react-hooks": "^5.2.0",
+    "husky": "^9.1.7",
     "prettier": "^3.5.3",
     "tailwindcss": "^4",
     "typescript": "^5"
