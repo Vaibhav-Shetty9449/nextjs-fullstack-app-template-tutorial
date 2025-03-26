@@ -22,6 +22,7 @@ You should have 4 sub-directories in this runtime directory now: "autoload",
 Install as a Vim 8 plugin. Note `local` can be any name, but some path
 element must be present. On Windows, instead of `~/.vim` use
 `$VIM_INSTALLATION_FOLDER\vimfiles`.
+
 ```shell
 mkdir -p ~/.vim/pack/local/start
 cd ~/.vim/pack/local/start
@@ -66,16 +67,16 @@ core separately.
 
 The EditorConfig Vim plugin supports the following EditorConfig [properties][]:
 
-* `indent_style`
-* `indent_size`
-* `tab_width`
-* `end_of_line`
-* `charset`
-* `insert_final_newline` (Feature `+fixendofline`, available on Vim 7.4.785+,
+- `indent_style`
+- `indent_size`
+- `tab_width`
+- `end_of_line`
+- `charset`
+- `insert_final_newline` (Feature `+fixendofline`, available on Vim 7.4.785+,
   or [PreserveNoEOL][] is required for this property)
-* `trim_trailing_whitespace`
-* `max_line_length`
-* `root` (only used by EditorConfig core)
+- `trim_trailing_whitespace`
+- `max_line_length`
+- `root` (only used by EditorConfig core)
 
 ## Selected Options
 
@@ -107,7 +108,7 @@ let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 ### Disable for a specific filetype
 
 You can disable this plugin for a specific buffer by setting
-`b:EditorConfig_disable`.  Therefore, you can disable the
+`b:EditorConfig_disable`. Therefore, you can disable the
 plugin for all buffers of a specific filetype. For example, to disable
 EditorConfig for all git commit messages (filetype `gitcommit`):
 
@@ -120,7 +121,7 @@ au FileType gitcommit let b:EditorConfig_disable = 1
 In very rare cases,
 you might need to override some project-specific EditorConfig rules in global
 or local vimrc in some cases, e.g., to resolve conflicts of trailing whitespace
-trimming and buffer autosaving.  This is not recommended, but you can:
+trimming and buffer autosaving. This is not recommended, but you can:
 
 ```viml
 let g:EditorConfig_disable_rules = ['trim_trailing_whitespace']

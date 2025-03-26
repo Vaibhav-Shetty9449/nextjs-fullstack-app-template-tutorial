@@ -35,7 +35,7 @@ Alternatively, you can install a recent version of Git LFS from the [Chocolatey]
 available for Linux, macOS, Windows, and FreeBSD.
 The binary packages include a script which will:
 
-- Install Git LFS binaries onto the system `$PATH`.  On Windows in particular, you may need to restart your command shell so any change to `$PATH` will take effect and Git can locate the Git LFS binary.
+- Install Git LFS binaries onto the system `$PATH`. On Windows in particular, you may need to restart your command shell so any change to `$PATH` will take effect and Git can locate the Git LFS binary.
 - Run `git lfs install` to perform required global configuration changes.
 
 ```ShellSession
@@ -52,11 +52,11 @@ For arm64, only Debian packages are built and only for recent versions due to th
 - Run `make`.
 - Place the `git-lfs` binary, which can be found in `bin`, on your system’s executable `$PATH` or equivalent.
 - Git LFS requires global configuration changes once per-machine. This can be done by
-running: `git lfs install`
+  running: `git lfs install`
 
 #### Verifying releases
 
-Releases are signed with the OpenPGP key of one of the core team members.  To
+Releases are signed with the OpenPGP key of one of the core team members. To
 get these keys, you can run the following command, which will print them to
 standard output:
 
@@ -72,7 +72,7 @@ $ gpg -d sha256sums.asc | grep git-lfs-linux-amd64-v2.10.0.tar.gz | shasum -a 25
 ```
 
 For the convenience of distributors, we also provide a wider variety of signed
-hashes in the `hashes.asc` file.  Those hashes are in the tagged BSD format, but
+hashes in the `hashes.asc` file. Those hashes are in the tagged BSD format, but
 can be verified with Perl's `shasum` or the GNU hash utilities, just like the
 ones in `sha256sums.asc`.
 
@@ -90,7 +90,7 @@ $ git lfs track "*.psd"
 more about this pattern syntax
 [here](https://git-scm.com/docs/gitattributes)).
 
-> *Note:* the quotation marks surrounding the pattern are important to
+> _Note:_ the quotation marks surrounding the pattern are important to
 > prevent the glob pattern from being expanded by the shell.
 
 After any invocation of `git-lfs-track(1)` or `git-lfs-untrack(1)`, you _must
@@ -111,7 +111,7 @@ $ git commit -m "add psd"
 ```
 
 > _Tip:_ if you have large files already in your repository's history, `git lfs
-> track` will _not_ track them retroactively. To migrate existing large files
+track` will _not_ track them retroactively. To migrate existing large files
 > in your history to use Git LFS, use `git lfs migrate`. For example:
 >
 > ```
@@ -145,7 +145,7 @@ Note: Git LFS requires at least Git 1.8.2 on Linux or 1.8.5 on macOS.
 ### Uninstalling
 
 If you've decided that Git LFS isn't right for you, you can convert your
-repository back to a plain Git repository with `git lfs migrate` as well.  For
+repository back to a plain Git repository with `git lfs migrate` as well. For
 example:
 
 ```ShellSession
@@ -164,9 +164,9 @@ Git LFS maintains a list of currently known limitations, which you can find and
 edit [here](https://github.com/git-lfs/git-lfs/wiki/Limitations).
 
 Git LFS source code utilizes Go modules in its build system, and therefore this
-project contains a `go.mod` file with a defined Go module path.  However, we
+project contains a `go.mod` file with a defined Go module path. However, we
 do not maintain a stable Go language API or ABI, as Git LFS is intended to be
-used solely as a compiled binary utility.  Please do not import the `git-lfs`
+used solely as a compiled binary utility. Please do not import the `git-lfs`
 module into other Go code and do not rely on it as a source code dependency.
 
 ## Need Help?
@@ -178,7 +178,7 @@ $ git lfs help <subcommand>
 ```
 
 The [official documentation](docs) has command references and specifications for
-the tool.  There's also a [FAQ](https://github.com/git-lfs/git-lfs/blob/main/docs/man/git-lfs-faq.adoc)
+the tool. There's also a [FAQ](https://github.com/git-lfs/git-lfs/blob/main/docs/man/git-lfs-faq.adoc)
 shipped with Git LFS which answers some common questions.
 
 If you have a question on how to use Git LFS, aren't sure about something, or
@@ -209,10 +209,10 @@ These are the humans that form the Git LFS core team, which runs the project.
 
 In alphabetical order:
 
-| [@chrisd8088][chrisd8088-user] | [@larsxschneider][larsxschneider-user] |
-| :---: | :---: |
+|     [@chrisd8088][chrisd8088-user]     |     [@larsxschneider][larsxschneider-user]     |
+| :------------------------------------: | :--------------------------------------------: |
 | [![][chrisd8088-img]][chrisd8088-user] | [![][larsxschneider-img]][larsxschneider-user] |
-| [PGP 088335A9][chrisd8088-pgp] | [PGP A5795889][larsxschneider-pgp] |
+|     [PGP 088335A9][chrisd8088-pgp]     |       [PGP A5795889][larsxschneider-pgp]       |
 
 [chrisd8088-img]: https://avatars1.githubusercontent.com/u/28857117?s=100&v=4
 [larsxschneider-img]: https://avatars1.githubusercontent.com/u/477434?s=100&v=4
@@ -229,8 +229,8 @@ not be possible without them.
 
 In alphabetical order:
 
-| [@andyneff][andyneff-user] | [@bk2204][bk2204-user] | [@PastelMobileSuit][PastelMobileSuit-user] | [@rubyist][rubyist-user] | [@sinbad][sinbad-user] | [@technoweenie][technoweenie-user] | [@ttaylorr][ttaylorr-user] |
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|     [@andyneff][andyneff-user]     |     [@bk2204][bk2204-user]     |     [@PastelMobileSuit][PastelMobileSuit-user]     |     [@rubyist][rubyist-user]     |     [@sinbad][sinbad-user]     |     [@technoweenie][technoweenie-user]     |     [@ttaylorr][ttaylorr-user]     |
+| :--------------------------------: | :----------------------------: | :------------------------------------------------: | :------------------------------: | :----------------------------: | :----------------------------------------: | :--------------------------------: |
 | [![][andyneff-img]][andyneff-user] | [![][bk2204-img]][bk2204-user] | [![][PastelMobileSuit-img]][PastelMobileSuit-user] | [![][rubyist-img]][rubyist-user] | [![][sinbad-img]][sinbad-user] | [![][technoweenie-img]][technoweenie-user] | [![][ttaylorr-img]][ttaylorr-user] |
 
 [andyneff-img]: https://avatars1.githubusercontent.com/u/7596961?v=3&s=100

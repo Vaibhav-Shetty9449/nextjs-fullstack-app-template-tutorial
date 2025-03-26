@@ -1,0 +1,24 @@
+.yarn
+.next
+dist
+node_modules
+# System directories (absolute paths)
+/mingw64/
+/usr/
+
+# System directories (absolute paths)
+C:/Users/Vaibh/nextjs-fullstack-app-template-tutorial/mingw64/
+C:/Users/Vaibh/nextjs-fullstack-app-template-tutorial/usr/
+C:/Users/Vaibh/nextjs-fullstack-app-template-tutorial/src/
+# Build artifacts
+.next/
+node_modules/
+dist/
+
+# File types to ignore
+*.*
+!*.js
+!*.jsx
+!*.ts
+!*.tsx
+!*.json

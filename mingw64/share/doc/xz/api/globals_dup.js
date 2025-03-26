@@ -1,4 +1,1 @@
-var globals_dup =
-[
-    [ "l", "globals.html", null ]
-];
+var globals_dup = [["l", "globals.html", null]];
